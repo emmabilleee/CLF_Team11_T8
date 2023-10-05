@@ -1,21 +1,20 @@
 <header>
-  <div class="logo">
-    <img src="logo.png" alt="Dit Logo" />
+  <div>
+    <a href="index.html"><img id="logo" src="img/logo4.svg" alt="logo" /></a>
   </div>
   <nav>
-    <ul class="desktop-menu">
-      <li><a href="#">INSTALLATIONS</a></li>
-      <li><a href="#">ROUTES</a></li>
-      <li><a href="#">ABOUT US</a></li>
+    <ul class="menu">
+      <li><a href="om_mig.html">OM MIG</a></li>
+      <li><a href="projekter.html">PROJEKTER</a></li>
+      <li><a href="kontakt.html">KONTAKT</a></li>
     </ul>
+    <div class="burger">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
   </nav>
-  <div class="burger-menu">
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-  </div>
 </header>
-
 <style>
   * {
     margin: 0;
@@ -28,10 +27,11 @@
   }
   header {
     display: flex;
+    width: 100%;
     justify-content: space-between;
+    align-items: center;
+    padding: 20px;
     background-color: black;
-    color: white;
-    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -40,96 +40,159 @@
     box-shadow: 0 5px 50px rgba(125, 101, 208, 20);
   }
 
-  .logo img {
-    max-width: 100px; /* logo's størrelse */
+  nav {
+    display: flex;
+    align-items: center;
   }
 
-  nav ul {
+  .menu {
+    display: flex;
     list-style: none;
     margin: 0;
     padding: 0;
-    display: flex; /* Ændret til flex for at placere menuen til venstre */
   }
 
-  nav ul li {
-    margin-right: 40px; /* Afstand mellem menuelementerne */
+  .menu li {
+    margin-right: 20px;
   }
 
-  nav ul li:last-child {
-    margin-right: 0; /* afstanden til højre for det sidste element */
+  .menu li:last-child {
+    margin-right: 0;
   }
 
-  nav ul li a {
+  .menu a {
+    display: block;
+    padding: 20px;
     text-decoration: none;
-    color: white; /* Tekstfarven for menu-links */
-    font-weight: bold;
+    transition: color 0.3s;
   }
 
-  .burger-menu {
+  .menu a:hover {
+    color: orange;
+    text-shadow: orange 6px 6px 10px;
+  }
+
+  .burger {
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+  }
+
+  .burger .line {
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    margin-bottom: 5px;
+  }
+  .burger {
     display: none;
   }
 
-  /* Ændringer til menuen ved mindre skærmstørrelser (responsivt design) */
-  @media (max-width: 768px) {
-    header {
-      flex-direction: column;
-      align-items: flex-start;
-      padding: 10px 20px;
-    }
-
-    .logo {
-      margin-bottom: 10px;
-    }
-
-    nav ul {
-      text-align: left;
-      display: none; /* Skjul menuen på mindre skærme */
-    }
-
-    .burger-menu {
-      display: block; /* Vis burger-menu på mindre skærme */
-      flex-direction: column;
-      cursor: pointer;
-    }
-
-    .bar {
-      width: 25px;
-      height: 3px;
-      background-color: white;
-      margin: 3px 0;
-    }
-
-    .mobile-menu {
+  li a {
+    text-decoration: none;
+    color: white;
+    font-family: "Barlow", sans-serif;
+    font-weight: 100;
+    font-size: 1rem;
+    padding: 10px 9px 10px 9px;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  .logo img {
+    max-width: 100px; /* logo's størrelse */
+  }
+  @media screen and (max-width: 800px) {
+    .menu {
       display: none;
-      background-color: black;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      text-align: center;
-      z-index: 2;
+    }
+    .burger {
+      display: block;
+    }
+    .burger.active .line:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
     }
 
-    .mobile-menu ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
+    .burger.active .line:nth-child(2) {
+      opacity: 0;
+    }
+
+    .burger.active .line:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    nav.active .menu {
+      display: block;
       position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      top: 120px;
+      left: 0;
+      width: 150%;
+      z-index: 1;
+      background-color: black;
     }
 
-    .mobile-menu ul li {
-      margin: 20px 0;
+    nav.active .menu li {
+      margin: 1px 1px;
     }
 
-    .mobile-menu ul li a {
+    nav.active .menu a {
+      font-size: 24px;
+    }
+  }
+  @media (min-width: 800px) {
+    header {
+      top: 0;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    #logo {
+      width: 80px;
+      height: auto;
+      align-self: center;
+      display: inline;
+      margin: 0;
+      padding-top: 20px;
+    }
+
+    header nav ul {
+      display: flex;
+      justify-content: space-between;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      gap: 40px;
+      overflow-x: none;
+    }
+    li a {
       text-decoration: none;
       color: white;
-      font-weight: bold;
-      font-size: 20px;
+      font-family: "Barlow", sans-serif;
+      font-weight: 100;
+      font-style: normal;
+      font-size: 1rem;
+    }
+    a:hover {
+      text-decoration: underline;
     }
   }
 </style>
+<script>
+  const burger = document.querySelector(".burger");
+  const nav = document.querySelector("nav");
+  const menu = document.querySelector(".menu");
+  const links = document.querySelectorAll(".menu li a");
+
+  burger.addEventListener("click", () => {
+    burger.classList.toggle("active");
+    nav.classList.toggle("active");
+  });
+
+  links.forEach((link) => {
+    link.addEventListener("click", () => {
+      burger.classList.remove("active");
+      nav.classList.remove("active");
+    });
+  });
+</script>
