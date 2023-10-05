@@ -20,9 +20,11 @@ import Button from "../components/Button.astro"
   </header>
   <body> 
 <section class="hero">
-<img src="https://copenhagenlightfestival.org/wp-content/uploads/2023/02/Knips.jpg" alt="hero">
+<img src="https://copenhagenlightfestival.org/wp-content/uploads/2023/02/Knips.jpg" alt="hero" class="hero_img">
+<div class="text_hero">
 <h1>COPENHAGEN LIGHT FESTIAL</h1>
 <h2>2. februar - 25 februar 2024</h2>
+</div>
 <Button></Button>
 <Button></Button>
 <Button></Button>
@@ -62,5 +64,26 @@ Sign up with your email below</h3>
 </html>
 
 <style>
+	.hero_img{
+		position: relative;
+  		text-align: center;
+	}
+	.text_hero{
+		position: absolute;
+  		top: 22%;
+		left: 10%;  		
+		text-shadow: #FFFFFF 1px 0 10px;
+		  		text-align: center;
+
+	}
+	.text_hero h1{
+		font-size: 1.2rem;
+		margin-bottom: 2px;
+
+	}
+	.text_hero h2{
+		font-size: 1rem;
+		margin-top: 0px;
+	}
 
 </style>
