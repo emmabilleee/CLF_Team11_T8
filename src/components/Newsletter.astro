@@ -1,7 +1,7 @@
 ---
 import Button from "./Button.astro";
 ---
-<section class="newsletter, mobile">
+<section class="newsletter mobile">
 	<img src="https://copenhagenlightfestival.org/wp-content/uploads/2020/02/Trampoline_02-1.jpg" alt="">
 	<h3 class="newsletter_header">Get updated about the festival! Sign up with your email below</h3>
 
@@ -20,6 +20,38 @@ import Button from "./Button.astro";
 	<Button></Button>
 </section>
 <style>
+article{
+    margin: 300px;
+}
+.newsletter{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+	.newsletter_header{
+		font-size: 17px;
+		line-height: 30px;
+				margin-bottom: 30px;
+                margin: 40px;
+
+	}
+	input{
+		background-color: #D9D9D9;
+		color: grey;
+		padding: 10px;
+		border: none;
+        margin-left: 40px;
+
+	}
+	.submit{
+        margin-left: 100px;	
+        background-color: black;
+        color:white
+        }
+
+    img{
+        justify-content: center;
+        }
+    }
   @media screen and (max-width: 800px) {
 
 	.newsletter_header{
