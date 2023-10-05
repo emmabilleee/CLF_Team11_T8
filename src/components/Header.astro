@@ -1,0 +1,69 @@
+<header>
+  <div class="logo">
+    <img src="" alt="Dit Logo" />
+  </div>
+  <nav>
+    <ul>
+      <li><a href="">Installations</a></li>
+      <li><a href="">Routes</a></li>
+      <li><a href="">About Us</a></li>
+    </ul>
+  </nav>
+</header>
+
+<style>
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333; /* Baggrundsfarven på headeren */
+    color: white; /* Tekstfarven på headeren */
+  }
+
+  .logo img {
+    max-width: 100px; /* Juster efter dit logo's størrelse */
+  }
+
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav ul li {
+    display: inline;
+    margin-right: 20px; /* Afstand mellem menuelementerne */
+  }
+
+  nav ul li:last-child {
+    margin-right: 0; /* Fjern afstanden til højre for det sidste element */
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    color: white; /* Tekstfarven for menu-links */
+    font-weight: bold;
+  }
+
+  /* Ændringer til menuen ved mindre skærmstørrelser (responsivt design) */
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .logo {
+      margin-bottom: 10px;
+    }
+
+    nav ul {
+      text-align: left;
+    }
+
+    nav ul li {
+      display: block;
+      margin-bottom: 10px;
+    }
+  }
+</style>
