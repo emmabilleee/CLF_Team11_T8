@@ -21,3 +21,6 @@ p {
   font-family: Arial, Helvetica, sans-serif;
 }
 /*Mobile CSS*/
+* {
+  margin: 0;
+}
