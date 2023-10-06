@@ -1,9 +1,11 @@
 ---
-const {variant} = Astro.props;
+const {variant, link} = Astro.props;
 ---
 
-<a class={variant}><slot/></a>
+<a class={variant} href={link}><slot/></a>
 	
+
+
 <style>
 .primary {
 background-color: black;
