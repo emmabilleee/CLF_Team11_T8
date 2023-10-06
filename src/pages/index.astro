@@ -6,6 +6,8 @@ import Header from "../components/Header.astro";
 // })
 // const data = await response.json();
 import Button from "../components/Button.astro"
+import Countdown from "../components/Countdown.astro";
+import Newsletter from "../components/Newsletter.astro";
 ---
 
 <!DOCTYPE html>
@@ -20,44 +22,44 @@ import Button from "../components/Button.astro"
   </header>
   <body> 
 <section class="hero">
-<img src="https://copenhagenlightfestival.org/wp-content/uploads/2023/02/Knips.jpg" alt="hero" class="hero_img">
-<div class="text_hero">
-<h1>COPENHAGEN LIGHT FESTIAL</h1>
-<h2>2. februar - 25 februar 2024</h2>
-</div>
-<Button></Button>
-<Button></Button>
-<Button></Button>
+	<img src="https://copenhagenlightfestival.org/wp-content/uploads/2023/02/Knips.jpg" alt="hero" class="hero_img">
+	<div class="text_hero">
+	<h1>COPENHAGEN LIGHT FESTIAL</h1>
+	<h2>2. februar - 25 februar 2024</h2>
+	</div>
+	<Button></Button>
+	<Button></Button>
+	<Button></Button>
 </section>
 
-<section>
-<h2>“Copenhagen Light Festival looks forward to making a strong return in 2024”</h2>
-<img src="" alt="">
-<p>Copenhagen Light Festival also wishes to bring even bigger light installations to Copenhagen’s city center, which will require support and help.The festival therefore hopes that the planning of the 2024 edition will be spared by energy crises or worse, so that light may once again shine on the important state-owned buildings in the city center, an aspect of the festival that we’ve missed in 2023. This is something we hope to realize in 2024.</p>
+
+<section class="mobile">
+	<article>
+		<h2 class="info_header">“Copenhagen Light Festival looks forward to making a strong return in 2024”</h2>
+		<div class="grid_1">
+		<img src="https://copenhagenlightfestival.org/wp-content/uploads/2023/02/Our-Beating-Heart.jpg" alt="">
+		<p class="info_text">Copenhagen Light Festival also wishes to bring even bigger light installations to Copenhagen’s city center, which will require support and help.The festival therefore hopes that the planning of the 2024 edition will be spared by energy crises or worse, so that light may once again shine on the important state-owned buildings in the city center, an aspect of the festival that we’ve missed in 2023. This is something we hope to realize in 2024.</p>
+		</div>
+	</article>
 </section>
 
-<section class="countdown">
+<Countdown></Countdown>
 
+
+
+<section class="mobile">
+	<article>
+	<h2 class="installioner_header">INSTALLATIONER</h2>
+	<div class="grid_1">
+	<p class="installationer_text">Copenhagen Light Festival is an annual light festival that transforms the quiet and cold winter darkness into a unique celebration of light art, lighting design and illumination in the center of Copenhagen.<br>In three weeks of February the festival presents a wide range of light based works – such as sculpture, installation, projection mapping, event and illumination created by both established and upcoming light artists, lighting designers, students and organizations.<br>
+	The Festival invites both international and local audiences of all ages to enjoy the city during the darkest and even the coldest time of the year.</p>
+	<img src="https://copenhagenlightfestival.org/wp-content/uploads/2023/02/Echo-1.jpg" alt="">
+	<Button></Button>
+	</div>
+	</article>
 </section>
-<section>
-	<h2>INSTALLATIONER</h2>
-	<p>Copenhagen Light Festival is an annual light festival that transforms the quiet and cold winter darkness into a unique celebration of light art, lighting design and illumination in the center of Copenhagen.
 
-</header>
-<body>
-
-
-The Festival invites both international and local audiences of all ages to enjoy the city during the darkest and even the coldest time of the year.</p>
-<img src="" alt="">
-<Button></Button>
-</section>
-<section class="newsletter">
-	<img src="" alt="">
-	<h3>Get updated about the festival!
-Sign up with your email below</h3>
-<form action=""></form>
-<Button></Button>
-</section>
+<Newsletter></Newsletter>
 
   </body>
   <footer></footer>
@@ -66,6 +68,58 @@ Sign up with your email below</h3>
 </html>
 
 <style>
+
+	.text_hero{
+		position: absolute;
+  		top: 40%;
+		left: 15%;  		
+		text-shadow: #FFFFFF 1px 0 10px;
+		text-align: center;
+
+	}
+	.text_hero h1{
+		font-size: 5rem;
+
+	}
+	.text_hero h2{
+		font-size: 3rem;
+	}
+	.mobile{
+		margin: 100px;
+	}
+
+	.grid_1{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap:40px;
+	}
+
+	.info_header{
+		font-size: 35px;
+		line-height: 90px;
+		margin-bottom: 30px;
+	}
+	.info_text{
+		font-size: 25px;
+		line-height:40px;
+		margin-bottom: 50px;
+	}
+
+	.installioner_header{
+			font-size: 40px;
+		line-height: 60px;
+		margin-bottom: 30px;
+				text-shadow: #FFFFFF 1px 0 10px;
+
+	}
+	.installationer_text{
+		font-size: 20px;
+		line-height: 40px;
+		margin-bottom: 30px;
+	}
+
+
+	  @media screen and (max-width: 800px) {
 	.hero_img{
 		position: relative;
   		text-align: center;
@@ -75,7 +129,7 @@ Sign up with your email below</h3>
   		top: 22%;
 		left: 10%;  		
 		text-shadow: #FFFFFF 1px 0 10px;
-		  		text-align: center;
+		text-align: center;
 
 	}
 	.text_hero h1{
@@ -87,5 +141,61 @@ Sign up with your email below</h3>
 		font-size: 1rem;
 		margin-top: 0px;
 	}
+	.mobile{
+		margin: 50px;
+	}
+
+	.info_header{
+		font-size: 17px;
+		line-height: 30px;
+		margin-bottom: 30px;
+	}
+	.info_text{
+
+		font-size: 12px;
+		line-height: 25px;
+		margin-bottom: 50px;
+	}
+
+	.installioner_header{
+			font-size: 17px;
+		line-height: 30px;
+		margin-bottom: 30px;
+	}
+	.installationer_text{
+		font-size: 12px;
+		line-height: 25px;
+		margin-bottom: 30px;
+	}
+}
+
+
 
 </style>
+<script>
+	// Set the date we're counting down to
+	var countDownDate = new Date("Feb 2, 2024").getTime();
+
+	// Update the count down every 1 second
+	var x = setInterval(function() {
+
+  	// Get today's date and time
+ 	 var now = new Date().getTime();
+
+  	// Find the distance between now and the count down date
+  	var distance = countDownDate - now;
+
+  	// Time calculations for days, hours, minutes and seconds
+  	var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+
+
+  // Display the result in the element with id="demo"
+  document.getElementById("demo").innerHTML = days + "<br> DAYS" 
+
+  // If the count down is finished, write some text
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
