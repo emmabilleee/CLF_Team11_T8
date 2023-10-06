@@ -1,31 +1,32 @@
 ---
-const {variant, link} = Astro.props;
+const { variant, link } = Astro.props;
 ---
 
-<a class={variant} href={link}><slot/></a>
-	
-
+<a class={variant} href={link}><slot /></a>
 
 <style>
-.primary {
-background-color: black;
-color: white;
-font-family: "Signika", sans-serif;
-font-size: 0.7rem;
-font-weight: 400;
-padding: 15px 20px;
-border: solid 1px white;
-box-shadow: 0 0 20px 10px white;
-}
+  .primary {
+    background-color: black;
+    color: white;
+    font-family: "Signika", sans-serif;
+    font-size: 0.7rem;
+    font-weight: 400;
+    padding: 15px 20px;
+    border: solid 1px white;
+    box-shadow: 0 0 20px 10px white;
+  }
+  a {
+    text-decoration: none;
+  }
 
-.secondary {
-background-color: black;
-color: white;
-font-family: "Signika", sans-serif;
-font-size: 0.7rem;
-font-weight: 400;
-padding: 15px 20px;
-border: solid 1px hotpink;
-box-shadow: 0 0 20px 10px hotpink;
-}
+  .secondary {
+    background-color: black;
+    color: white;
+    font-family: "Signika", sans-serif;
+    font-size: 0.7rem;
+    font-weight: 400;
+    padding: 15px 20px;
+    border: solid 1px hotpink;
+    box-shadow: 0 0 20px 10px hotpink;
+  }
 </style>
