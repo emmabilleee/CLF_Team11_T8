@@ -1,4 +1,5 @@
 ---
+import Installation from "../components/Installation.astro";
 const data = await fetch("https://augemxyhxliaasohflww.supabase.co/rest/v1/CLF", {
 method:"GET",
 headers: {
@@ -7,6 +8,9 @@ headers: {
 }).then(res=>res.json())
 
 ---
+
+
+
 
 <section class="installation">
 {data.map(show=>{
