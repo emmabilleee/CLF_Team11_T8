@@ -1,0 +1,9 @@
+---
+const {data} = Astro.props;
+console.log(data); 
+---
+
+<article>
+    <h2>{data.artname}</h2>
+<img src= {"/imgs/"+data.img} alt="">
+</article>
