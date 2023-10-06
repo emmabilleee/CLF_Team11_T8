@@ -35,24 +35,26 @@ import MainLayout from "../layouts/MainLayout.astro";
     <Countdown />
 
     <section class="mobile">
-      <article>
+      <article class="grid_1">
+		<section>
         <h2 class="installioner_header">INSTALLATIONER</h2>
-        <div class="grid_1">
           <p class="installationer_text">
             Copenhagen Light Festival is an annual light festival that transforms the quiet and cold winter darkness into a unique celebration of light art, lighting design and illumination in the center of Copenhagen.<br />In three weeks of February the festival presents a wide range of light based works – such as sculpture, installation, projection mapping, event and illumination created by both established and upcoming light artists, lighting designers, students and organizations.<br />
             The Festival invites both international and local audiences of all ages to enjoy the city during the darkest and even the coldest time of the year.
           </p>
+		  </section>
+		  <section>
           <img src="https://copenhagenlightfestival.org/wp-content/uploads/2023/02/Echo-1.jpg" alt="" />
-          <Button />
-        </div>
+        	<Button variant="secondary" link="/listeview/" class="knap">READ MORE</Button>
+		</section>
       </article>
-    </section>
     <hr />
     <Newsletter />
 	</MainLayout>
 
   <style>
-    .hero_section {
+
+.hero_section {
       display: grid;
       grid-template-columns: 1fr;
       grid-template-rows: 500px 500px;

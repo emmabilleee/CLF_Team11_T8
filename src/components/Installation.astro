@@ -8,15 +8,14 @@ import Button from "./Button.astro";
 <article>
     <img src= {"/imgs/"+data.img} alt="">
     <h2>{data.artname}</h2>
-    <Button variant="fourth">READ MORE</Button>
+    <Button variant="fourth" link={`/installations/${data.slug}`}>READ MORE</Button>
 </article>
 </a>
 
 <style>
     h2{
         font-size: 1.5rem;
-                margin-top: 30px;
-
+        margin-top: 30px;
         margin-bottom: 40px;
     }
     img{
