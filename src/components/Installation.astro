@@ -1,9 +1,28 @@
 ---
 const {data} = Astro.props;
 console.log(data); 
+import Button from "./Button.astro";
 ---
 
+<a href={`/installations/${data.slug}`}>
 <article>
+    <img src= {"/imgs/"+data.img} alt="">
     <h2>{data.artname}</h2>
-<img src= {"/imgs/"+data.img} alt="">
+    <Button variant="fourth">READ MORE</Button>
 </article>
+</a>
+
+<style>
+    h2{
+        font-size: 1.5rem;
+                margin-top: 30px;
+
+        margin-bottom: 40px;
+    }
+    img{
+max-width: 400px;   
+
+}
+    article{
+text-align: center;    }
+</style>
