@@ -1,0 +1,84 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+export async function getStaticPaths() {
+  const data = await fetch("https://augemxyhxliaasohflww.supabase.co/rest/v1/CLF", {
+method:"GET",
+headers: {
+    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImF1Z2VteHloeGxpYWFzb2hmbHd3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTY0OTQ0NTgsImV4cCI6MjAxMjA3MDQ1OH0.h5CxkQ4yzFOQ2nrSvU-bqL6KvJjnQ2a_EPZneeQ5Dwg"
+}}
+).then(response => response.json());
+
+  return data.map((installation) => {
+    return {
+      params: { slug: installation.slug },
+      props: { myData:installation },
+    };
+  });
+}
+const {myData} = Astro.props
+console.log(myData)
+---
+<MainLayout>
+<article>
+    <section>
+    <h2>{myData.id +". "+ myData.artname}</h2>
+    <img src= {"/imgs/"+ myData.img} alt="">
+    <p>{"Website: " + myData.links}</p>
+    <p>{"Thanks to: " + myData.thanksto}</p>
+    </section>
+        <section class="section2">
+    <h3>{"Where: " + myData.where}</h3>
+    <h3>{"Who: " + myData.who}</h3>
+    <p class="desciption">{myData.text}</p>
+        </section>
+
+</article>
+</MainLayout>
+<style>
+      @media screen and (min-width: 800px) {
+
+    article{
+        margin: 40px;
+        line-height: 30px;
+ }
+ section{
+    margin-bottom: 40px;
+ }
+ h2{
+        margin-bottom: 20px;
+
+ }
+ h3{
+        margin-bottom: 20px;
+
+ }}
+    article{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 80px;
+        line-height: 30px;
+        gap: 30px;
+ }
+ section{
+    margin-bottom: 40px;
+ }
+ h2{
+        margin-bottom: 20px;
+        font-size: 2rem;
+
+ }
+ h3{
+        margin-bottom: 20px;
+            font-size: 1.2rem;
+
+
+ }
+ .desciption{
+    font-size: 1.2rem;
+    line-height: 2rem;
+ }
+ .section2{
+    margin-top: 50px;
+ }
+
+</style>
