@@ -1,88 +1,87 @@
 ---
 import Installation from "../components/Installation.astro";
 const data = await fetch("https://augemxyhxliaasohflww.supabase.co/rest/v1/CLF", {
-method:"GET",
-headers: {
-    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImF1Z2VteHloeGxpYWFzb2hmbHd3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTY0OTQ0NTgsImV4cCI6MjAxMjA3MDQ1OH0.h5CxkQ4yzFOQ2nrSvU-bqL6KvJjnQ2a_EPZneeQ5Dwg"
-}
-}).then(res=>res.json())
+  method: "GET",
+  headers: {
+    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImF1Z2VteHloeGxpYWFzb2hmbHd3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTY0OTQ0NTgsImV4cCI6MjAxMjA3MDQ1OH0.h5CxkQ4yzFOQ2nrSvU-bqL6KvJjnQ2a_EPZneeQ5Dwg",
+  },
+}).then((res) => res.json());
 import "../styles/style.css";
-import Button from "../components/Button.astro"
+import Button from "../components/Button.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 ---
 
-
 <MainLayout>
-
-    <section class="grid_1">
+  <section class="grid_1">
     <h1>INSTALLATIONS</h1>
-        <Button variant="third" link="/aboutus/">LIGHT INSTALLATIONS</Button>
-        <Button variant="third" link="/aboutus/">POP-UP EVENTS</Button>
-        <Button variant="third" link="/routes/">EXTRA LIGHT EXPERIENCES</Button>
-    </section>
+    <Button variant="third" link="/aboutus/">LIGHT INSTALLATIONS</Button>
+    <Button variant="third" link="/aboutus/">POP-UP EVENTS</Button>
+    <Button variant="third" link="/routes/">EXTRA LIGHT EXPERIENCES</Button>
+  </section>
 
-    <h2>LIGHT INSTALLATIONS</h2>
-    <section class="installation">
-{data.map(show=>{
-return <Installation data={show}/> 
-})
-}
-</section>
+  <h2>LIGHT INSTALLATIONS</h2>
+  <section class="installation">
+    {
+      data.map((show) => {
+        return <Installation data={show} />;
+      })
+    }
+  </section>
 
-<h2>POP-UP EVENTS</h2>
-<section class="installation">
-{data.map(show=>{
-return <Installation data={show}/> 
-})
-}
-</section>
+  <h2>POP-UP EVENTS</h2>
+  <section class="installation">
+    {
+      data.map((show) => {
+        return <Installation data={show} />;
+      })
+    }
+  </section>
 
-<h2>EXTRA LIGHT EXPERIENCES</h2>
-<section class="installation">
-{data.map(show=>{
-return <Installation data={show}/> 
-})
-}
-</section>
+  <h2>EXTRA LIGHT EXPERIENCES</h2>
+  <section class="installation">
+    {
+      data.map((show) => {
+        return <Installation data={show} />;
+      })
+    }
+  </section>
 </MainLayout>
- 
+
 <style>
-@media screen and (max-width: 800px) {
-.grid_1{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    gap: 30px;
-    margin-left: 40px;
-    margin-right: 40px;
-    margin-top: 50px;
-    margin-bottom: 50px; 
-}
-.grid_1 h1{
-    text-align: center;
-    text-shadow: #ffffff 1px 0 10px;
-    margin-bottom: 5px;
-}
-h2{
-   text-align: center;
-   margin-bottom: 20px;
-
-}
-.installation{
-display: grid;
-  grid-template-columns: repeat(2, 1fr); 
-  gap: 40px;
-  margin-left: 40px;
-  margin-right: 80px;   
-  margin-bottom: 100px;   
-
-  
+  @media screen and (max-width: 800px) {
+    .grid_1 {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      gap: 30px;
+      margin-left: 40px;
+      margin-right: 40px;
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
+    .grid_1 h1 {
+      text-align: center;
+      text-shadow: #ffffff 1px 0 10px;
+      margin-bottom: 5px;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .installation {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+      margin-left: 40px;
+      margin-right: 80px;
+      margin-bottom: 100px;
+    }
+    .installation img {
+      width: 50px;
+    }
   }
-  .installation img{
-    width: 50px;
-  }}
 
-.grid_1{
+  .grid_1 {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr;
@@ -90,40 +89,30 @@ display: grid;
     margin-left: 500px;
     margin-right: 500px;
     margin-top: 80px;
-    margin-bottom: 100px; 
-}
-.grid_1 h1{
+    margin-bottom: 100px;
+  }
+  .grid_1 h1 {
     text-align: center;
     text-shadow: #ffffff 1px 0 10px;
     margin-bottom: 5px;
     font-size: 2.8rem;
-}
-h2{
+  }
+  h2 {
     text-align: center;
     margin-bottom: 40px;
-        font-size: 2.2rem;
-
-
-}
-.installation{
+    font-size: 2.2rem;
+  }
+  .installation {
     display: grid;
-  grid-template-columns: repeat(3, 1fr auto);
-      gap: 40px;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
     row-gap: 150px;
     margin-left: 40px;
-    margin-right: 80px;   
-    margin-bottom: 300px;  
-    margin-top: 100px; 
-
-  
+    margin-right: 80px;
+    margin-bottom: 300px;
+    margin-top: 100px;
   }
-  .installation img{
+  .installation img {
     width: 200px;
   }
-
-
-
-
- 
 </style>
-
