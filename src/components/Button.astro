@@ -53,11 +53,27 @@ const { variant, link } = Astro.props;
     color: black;
   }
 
+
+  .third{
+    background-color: #000026;
+    color: white;
+    font-family: "Raleway", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    padding: 30px 106px;
+    border: solid 1px white;
+    box-shadow: 0 0 20px 5px white;
+    text-align: center;
+    gap: 10px;
+    max-width: 200px;
+  }
+
+        @media (min-width: 800px) {
 .third{
     background-color: #000026;
     color: white;
   font-family: "Raleway", sans-serif;
-    font-size: 0.8rem;
+    font-size: 15px;
     font-weight: 400;
     padding: 30px 60px;
     border: solid 1px white;
@@ -68,10 +84,11 @@ const { variant, link } = Astro.props;
   }
 
 
+
   .third:hover{
  background-color: white;
     color: black;  
-}
+}}
 
   .fourth{
     background-color: #000026;
