@@ -12,68 +12,6 @@ import MainLayout from "../layouts/MainLayout.astro";
 ---
 
 <MainLayout>
-<<<<<<< HEAD
-
-    <h1>INSTALLATIONS</h1>
-        <section class="grid_1">
-        <Button variant="third" link="/listeview/">LIGHT INSTALLATIONS</Button>
-        <Button variant="third" link="/listeview/">POP-UP EVENTS</Button>
-        <Button variant="third" link="/listeview/">EXTRA LIGHT EXPERIENCES</Button>
-    </section>
-
-    <h2>LIGHT INSTALLATIONS</h2>
-    <section class="installation">
-{data.map(show=>{
-return <Installation data={show}/> 
-})
-}
-</section>
-
-<h2>POP-UP EVENTS</h2>
-<section class="installation">
-{data.map(show=>{
-return <Installation data={show}/> 
-})
-}
-</section>
-
-<h2>EXTRA LIGHT EXPERIENCES</h2>
-<section class="installation">
-{data.map(show=>{
-return <Installation data={show}/> 
-})
-}
-</section>
-</MainLayout>
- 
-<style>
-.grid_1{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    gap: 40px;
-    margin-bottom: 100px;
-    
-}
-h1{
-    text-align: center;
-    text-shadow: #ffffff 1px 0 10px;
-    margin-bottom: 50px;
-    margin-top: 50px;
-}
-h2{
-   text-align: center;
-   margin-bottom: 20px;
-
-}
-.installation{
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); 
-  gap: 40px;
-  margin-left: 40px;
-  margin-right: 80px;   
-  margin-bottom: 100px;   
-=======
   <section class="grid_1">
     <h1>INSTALLATIONS</h1>
     <Button variant="third" link="/aboutus/">LIGHT INSTALLATIONS</Button>
@@ -108,7 +46,6 @@ h2{
     }
   </section>
 </MainLayout>
->>>>>>> 6c772126b0578f6396b37be2ae9457e09849442a
 
 <style>
   @media screen and (max-width: 800px) {
@@ -143,7 +80,6 @@ h2{
       width: 50px;
     }
   }
-<<<<<<< HEAD
   .installation img{
     width: 50px;
   }
@@ -162,32 +98,13 @@ h2{
     
 }
 h1{
-=======
-
-  .grid_1 {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    gap: 70px;
-    margin-left: 500px;
-    margin-right: 500px;
-    margin-top: 80px;
-    margin-bottom: 100px;
-  }
-  .grid_1 h1 {
->>>>>>> 6c772126b0578f6396b37be2ae9457e09849442a
     text-align: center;
     text-shadow: #ffffff 1px 0 10px;
     margin-bottom: 5px;
     font-size: 2.8rem;
-<<<<<<< HEAD
     margin-top: 50px;
 }
 h2{
-=======
-  }
-  h2 {
->>>>>>> 6c772126b0578f6396b37be2ae9457e09849442a
     text-align: center;
     margin-bottom: 40px;
     font-size: 2.2rem;
@@ -205,12 +122,9 @@ h2{
   .installation img {
     width: 200px;
   }
-<<<<<<< HEAD
         }
 
 
 
  
-=======
->>>>>>> 6c772126b0578f6396b37be2ae9457e09849442a
 </style>
