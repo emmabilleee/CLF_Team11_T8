@@ -24,13 +24,13 @@ import Button from "./Button.astro";
   <Button />
 </section>
 <style>
-  article {
-  }
+
 
   .newsletter_header {
-    font-size: 20px;
+    font-size: 15px;
     line-height: 30px;
     margin-bottom: 30px;
+    text-align: left;
   }
   input {
     background-color: #d9d9d9;
@@ -41,14 +41,16 @@ import Button from "./Button.astro";
   .submit {
     background-color: #000026;
     color: white;
-    font-family: "Signika", sans-serif;
     font-size: 0.8rem;
     font-weight: 400;
     padding: 10px 20px;
-    border: solid 1px #7D65D0;
+    border: solid 1px #8977cd;
     box-shadow: 0 0 20px 5px #7D65D0;
-    margin-top: 30px;
-    margin-left: 95px;
+ 
+  }
+  .submit:hover{
+    background-color: #7D65D0;
+    color: black;
   }
 
   img {
@@ -57,10 +59,9 @@ import Button from "./Button.astro";
 
   }
   .newsletter {
-    margin-left: 30px;
-    margin-right: 30px;
-    margin-top: 60px;
-    margin-bottom: 100px;
+    margin-top: 200px;
+    margin-bottom: 200px;
+text-align: center;
   }
 
       @media (min-width: 800px)	{
@@ -74,10 +75,11 @@ import Button from "./Button.astro";
     grid-column: 1/1/-1;
     grid-row: 2;
     justify-content: center;
+    gap: 50px;
 
     }
     .newsletter_header {
-      font-size: 17px;
+      font-size: 25px;
       line-height: 30px;
       margin-bottom: 30px;
       margin: 40px;
