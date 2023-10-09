@@ -7,37 +7,37 @@ import MainLayout from "../layouts/MainLayout.astro";
 ---
 
 <!DOCTYPE html>
-    <MainLayout>
-
-    <div class="hero_section">
-      <img src="https://copenhagenlightfestival.org/wp-content/uploads/2023/02/Knips.jpg" alt="hero" class="hero_img" />
-      <div class="text_hero">
-        <h1>COPENHAGEN LIGHT FESTIVAL</h1>
-        <h2>2. februar - 25 februar 2024</h2>
-      </div>
-
-      <section class="grid_forside">
-        <Button variant="primary" link="/aboutus/">WHEN</Button>
-        <Button variant="primary" link="/aboutus/">WHAT</Button>
-        <Button variant="primary" link="/routes/">WHERE</Button>
-      </section>
+<MainLayout>
+  <div class="hero_section">
+    <img src="https://copenhagenlightfestival.org/wp-content/uploads/2023/02/Knips.jpg" alt="hero" class="hero_img" />
+    <div class="text_hero">
+      <h1>COPENHAGEN LIGHT FESTIVAL</h1>
+      <h2>2. februar - 25 februar 2024</h2>
     </div>
-    <section class="mobile">
-      <article>
-        <h2 class="info_header">“Copenhagen Light Festival looks forward to making a strong return in 2024”</h2>
-        <div class="grid_1">
-          <img src="https://copenhagenlightfestival.org/wp-content/uploads/2023/02/Our-Beating-Heart.jpg" alt="" class="hero_img"/>
-          <p class="info_text">Copenhagen Light Festival also wishes to bring even bigger light installations to Copenhagen’s city center, which will require support and help.The festival therefore hopes that the planning of the 2024 edition will be spared by energy crises or worse, so that light may once again shine on the important state-owned buildings in the city center, an aspect of the festival that we’ve missed in 2023. This is something we hope to realize in 2024.</p>
-        </div>
-      </article>
+
+    <section class="grid_forside">
+      <Button variant="primary" link="/aboutus/">When</Button>
+      <Button variant="primary" link="/aboutus/">What</Button>
+      <Button variant="primary" link="/routes/">Where</Button>
     </section>
+  </div>
+  <section class="mobile">
+    <article>
+      <h2 class="info_header">“Copenhagen Light Festival looks forward to making a strong return in 2024”</h2>
+      <div class="grid_1">
+        <img src="https://copenhagenlightfestival.org/wp-content/uploads/2023/02/Our-Beating-Heart.jpg" alt="" class="hero_img" />
+        <p class="info_text">Copenhagen Light Festival also wishes to bring even bigger light installations to Copenhagen’s city center, which will require support and help.The festival therefore hopes that the planning of the 2024 edition will be spared by energy crises or worse, so that light may once again shine on the important state-owned buildings in the city center, an aspect of the festival that we’ve missed in 2023. This is something we hope to realize in 2024.</p>
+      </div>
+    </article>
+  </section>
 
-    <Countdown />
+  <Countdown />
 
-    <section class="mobile">
-      <article class="grid_1">
-		<section>
+  <section class="mobile">
+    <article class="grid_1">
+      <section>
         <h2 class="installioner_header">INSTALLATIONER</h2>
+<<<<<<< HEAD
           <p class="installationer_text">
             Copenhagen Light Festival is an annual light festival that transforms the quiet and cold winter darkness into a unique celebration of light art, lighting design and illumination in the center of Copenhagen.<br />In three weeks of February the festival presents a wide range of light based works – such as sculpture, installation, projection mapping, event and illumination created by both established and upcoming light artists, lighting designers, students and organizations.<br />
             The Festival invites both international and local audiences of all ages to enjoy the city during the darkest and even the coldest time of the year.
@@ -48,30 +48,42 @@ import MainLayout from "../layouts/MainLayout.astro";
         	<Button variant="secondary" link="/listeview/" class="knap">READ MORE</Button>
 		</section>
       </article>
+=======
+        <p class="installationer_text">
+          Copenhagen Light Festival is an annual light festival that transforms the quiet and cold winter darkness into a unique celebration of light art, lighting design and illumination in the center of Copenhagen.<br />In three weeks of February the festival presents a wide range of light based works – such as sculpture, installation, projection mapping, event and illumination created by both established and upcoming light artists, lighting designers, students and organizations.<br />
+          The Festival invites both international and local audiences of all ages to enjoy the city during the darkest and even the coldest time of the year.
+        </p>
+      </section>
+      <section>
+        <img src="https://copenhagenlightfestival.org/wp-content/uploads/2023/02/Echo-1.jpg" alt="" />
+        <Button variant="secondary" link="/listeview/" class="knap">READ MORE</Button>
+      </section>
+    </article>
+    <hr />
+>>>>>>> 6c772126b0578f6396b37be2ae9457e09849442a
     <Newsletter />
-	</MainLayout>
+  </section>
 
   <style>
-
-.hero_section {
+    .hero_section {
       display: grid;
       grid-template-columns: 1fr;
       grid-template-rows: 500px 500px;
       align-items: center;
     }
-    .hero_section  img {
+    .hero_section img {
       grid-column: 1/-1;
       grid-row: 1/-1;
-	  height: 1000px;
-    z-index: -1;
-	}
+      height: 1000px;
+      z-index: -1;
+    }
+
     .text_hero {
       grid-column: 1/-1;
       grid-row: 1;
       text-align: center;
       text-shadow: #ffffff 1px 0 10px;
-	  margin-top: 260px;
-
+      margin-top: 260px;
     }
     .grid_forside {
       grid-column: 1/-1;
@@ -80,7 +92,7 @@ import MainLayout from "../layouts/MainLayout.astro";
       justify-content: center;
       gap: 8rem;
       text-shadow: #ffffff 1px 0 10px;
-	    margin-top: -200px;
+      margin-top: -200px;
     }
 
     @media (min-width: 800px) {
@@ -103,12 +115,6 @@ import MainLayout from "../layouts/MainLayout.astro";
     }
     .mobile {
       margin: 100px;
-    }
-
-    .grid_1 {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
     }
 
     .info_header {
@@ -138,6 +144,7 @@ import MainLayout from "../layouts/MainLayout.astro";
       .hero_img {
         position: relative;
         text-align: center;
+          width: 100%;
       }
       .text_hero {
         position: absolute;
@@ -206,6 +213,4 @@ import MainLayout from "../layouts/MainLayout.astro";
       }
     }, 1000);
   </script>
-
-
-</html>
+</MainLayout>
