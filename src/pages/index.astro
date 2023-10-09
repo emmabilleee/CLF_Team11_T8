@@ -8,22 +8,24 @@ import MainLayout from "../layouts/MainLayout.astro";
 
 <!DOCTYPE html>
 <MainLayout>
-  <div class="hero_section">
+  <section class="hero_section">
     <img src="https://copenhagenlightfestival.org/wp-content/uploads/2023/02/Knips.jpg" alt="hero" class="hero_img" />
     <div class="text_hero">
       <h1>COPENHAGEN LIGHT FESTIVAL</h1>
       <h2>2. februar - 25 februar 2024</h2>
-    </div>
+    </section>
 
     <section class="grid_forside">
       <Button variant="primary" link="/aboutus/">When</Button>
       <Button variant="primary" link="/aboutus/">What</Button>
       <Button variant="primary" link="/routes/">Where</Button>
     </section>
-  </div>
+
   <section class="mobile">
     <article>
+      <div>
       <h2 class="info_header">“Copenhagen Light Festival looks forward to making a strong return in 2024”</h2>
+      </div>
       <div class="grid_1">
         <img src="https://copenhagenlightfestival.org/wp-content/uploads/2023/02/Our-Beating-Heart.jpg" alt="" class="hero_img" />
         <p class="info_text">Copenhagen Light Festival also wishes to bring even bigger light installations to Copenhagen’s city center, which will require support and help.The festival therefore hopes that the planning of the 2024 edition will be spared by energy crises or worse, so that light may once again shine on the important state-owned buildings in the city center, an aspect of the festival that we’ve missed in 2023. This is something we hope to realize in 2024.</p>
@@ -42,8 +44,8 @@ import MainLayout from "../layouts/MainLayout.astro";
             The Festival invites both international and local audiences of all ages to enjoy the city during the darkest and even the coldest time of the year.
           </p>
 		  </section>
-		  <section>
-          <img src="https://copenhagenlightfestival.org/wp-content/uploads/2023/02/Echo-1.jpg" alt="" />
+		  <section class="installation_info">
+          <img src="https://copenhagenlightfestival.org/wp-content/uploads/2023/02/Echo-1.jpg" alt="" class="insta"/>
         	<Button variant="secondary" link="/listeview/" class="knap">READ MORE</Button>
 		</section>
       </article>
@@ -51,6 +53,85 @@ import MainLayout from "../layouts/MainLayout.astro";
   </section>
 
   <style>
+  .hero_section {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 100px 100px;
+      align-items: center;
+    }
+    .hero_section img {
+      grid-column: 1/-1;
+      grid-row: 1/-1;
+      width: 375px;
+      height: auto;
+      z-index: -1;
+    }
+
+    .text_hero {
+      grid-column: 1/-1;
+      grid-row: 1;
+      text-align: center;
+      text-shadow: #ffffff 1px 0 10px;
+      margin-top: 100px;
+      
+    }
+     .text_hero h1 {
+        font-size: 20px;
+        margin-bottom: 2px;
+      }
+      .text_hero h2 {
+        font-size: 10px;
+        margin-top: 0px;
+      }
+
+    .grid_forside {
+      grid-column: 1/-1;
+      grid-row: 2;
+      display: flex;
+      justify-content: center;
+      text-shadow: #ffffff 0px 0px 5px;
+      margin-top: -50px;
+      gap: 20px
+
+    }
+      .mobile {
+        margin: 50px;
+      }
+
+      .info_header {
+        font-size: 13px;
+        line-height: 30px;
+        margin-top: 70px;
+        margin-bottom: 30px;
+      }
+      .info_text {
+        font-size: 12px;
+        line-height: 25px;
+        margin-top: 20px;
+        margin-bottom: 70px;
+      }
+
+      .installioner_header {
+        font-size: 17px;
+        line-height: 30px;
+        margin-top: 50px;
+        margin-bottom: 30px;
+      }
+      .installationer_text {
+        font-size: 12px;
+        line-height: 25px;
+        margin-bottom: 30px;
+      }
+
+      .insta{
+        margin-top: 10px;
+        margin-bottom: 50px;
+      }
+      .installation_info{
+        text-align: center;
+      }
+    
+      @media (min-width: 800px) {
     .hero_section {
       display: grid;
       grid-template-columns: 1fr;
@@ -60,7 +141,8 @@ import MainLayout from "../layouts/MainLayout.astro";
     .hero_section img {
       grid-column: 1/-1;
       grid-row: 1/-1;
-      height: 1000px;
+      width: 1425px;
+      height: auto;
       z-index: -1;
     }
 
@@ -78,26 +160,14 @@ import MainLayout from "../layouts/MainLayout.astro";
       justify-content: center;
       gap: 8rem;
       text-shadow: #ffffff 1px 0 10px;
-      margin-top: -200px;
-    }
-
-    @media (min-width: 800px) {
-      hr {
-        margin-top: 100px;
-        margin-right: 200px;
-        margin-left: 200px;
-        box-shadow: #ffffff 1px 0 10px;
-        color: pink;
-        height: 5px;
-        background-color: hotpink;
-      }
+      margin-top: -350px;
     }
 
     .text_hero h1 {
-      font-size: 5rem;
+      font-size: 70px;
     }
     .text_hero h2 {
-      font-size: 3rem;
+      font-size: 30px;
     }
     .mobile {
       margin: 100px;
@@ -125,54 +195,8 @@ import MainLayout from "../layouts/MainLayout.astro";
       line-height: 40px;
       margin-bottom: 30px;
     }
-
-    @media screen and (max-width: 800px) {
-      .hero_img {
-        position: relative;
-        text-align: center;
-          width: 100%;
-      }
-      .text_hero {
-        position: absolute;
-        top: 22%;
-        left: 10%;
-        text-shadow: #ffffff 1px 0 10px;
-        text-align: center;
-      }
-      .text_hero h1 {
-        font-size: 1.2rem;
-        margin-bottom: 2px;
-      }
-      .text_hero h2 {
-        font-size: 1rem;
-        margin-top: 0px;
-      }
-      .mobile {
-        margin: 50px;
-      }
-
-      .info_header {
-        font-size: 17px;
-        line-height: 30px;
-        margin-bottom: 30px;
-      }
-      .info_text {
-        font-size: 12px;
-        line-height: 25px;
-        margin-bottom: 50px;
-      }
-
-      .installioner_header {
-        font-size: 17px;
-        line-height: 30px;
-        margin-bottom: 30px;
-      }
-      .installationer_text {
-        font-size: 12px;
-        line-height: 25px;
-        margin-bottom: 30px;
-      }
-    }
+  }
+    
   </style>
   <script>
     // Set the date we're counting down to
