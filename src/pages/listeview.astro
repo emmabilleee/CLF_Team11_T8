@@ -9,6 +9,7 @@ headers: {
 import "../styles/style.css";
 import Button from "../components/Button.astro"
 import MainLayout from "../layouts/MainLayout.astro";
+console.log("DATA",data)
 ---
 
 
@@ -24,7 +25,9 @@ import MainLayout from "../layouts/MainLayout.astro";
     <h2>LIGHT INSTALLATIONS</h2>
     <section class="installation">
 {data.map(show=>{
+    if (show.type==="Light") {
 return <Installation data={show}/> 
+    }
 })
 }
 </section>
@@ -32,7 +35,9 @@ return <Installation data={show}/>
 <h2>POP-UP EVENTS</h2>
 <section class="installation">
 {data.map(show=>{
+  if (show.type==="PopUp"){
 return <Installation data={show}/> 
+  }
 })
 }
 </section>
@@ -40,8 +45,10 @@ return <Installation data={show}/>
 <h2>EXTRA LIGHT EXPERIENCES</h2>
 <section class="installation">
 {data.map(show=>{
+    if (show.type==="EkstaLight"){
 return <Installation data={show}/> 
-})
+    }
+}) 
 }
 </section>
 </MainLayout>
