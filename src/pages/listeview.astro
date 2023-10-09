@@ -47,7 +47,6 @@ return <Installation data={show}/>
 </MainLayout>
  
 <style>
-@media screen and (max-width: 800px) {
 .grid_1{
     display: grid;
     grid-template-columns: 1fr;
@@ -80,7 +79,9 @@ display: grid;
   }
   .installation img{
     width: 50px;
-  }}
+  }
+
+        @media (min-width: 800px) {
 
 .grid_1{
     display: grid;
@@ -120,7 +121,7 @@ h2{
   .installation img{
     width: 200px;
   }
-
+        }
 
 
 
