@@ -20,7 +20,6 @@ import MainLayout from "../layouts/MainLayout.astro";
           <img src="/imgs/Echo.jpg" alt="echo_billede" />
         </div>
       </div>
-      <hr />
     </section>
     <Newsletter />
 </MainLayout>
@@ -42,44 +41,29 @@ import MainLayout from "../layouts/MainLayout.astro";
       img {
         margin-top: 30px;
       }
-      hr {
-        box-shadow: #ffffff 1px 0 10px;
-        color: hotpink;
-        margin-right: 30px;
-        margin-left: 30px;
-        margin-top: 50px;
-        color: pink;
-        height: 3px;
-        background-color: hotpink;
-      }
+     
       @media (min-width: 800px) {
         h1 {
           top: 35%;
           left: 40%;
           text-shadow: #ffffff 1px 0 10px;
           text-align: center;
-          font-size: 60px;
+          font-size: 50px;
         }
         .grid_about {
           display: grid;
           grid-template-columns: 1fr 1fr;
           margin-right: 50px;
           margin-left: 50px;
-          margin-top: 30px;
+          margin-top: 50px;
           gap: 30px;
+          margin-bottom: 150px;
         }
         p {
-          font-size: 25px;
+          font-size: 17px;
+        line-height: 30px;
         }
-        hr {
-          margin-top: 100px;
-          margin-right: 200px;
-          margin-left: 200px;
-          box-shadow: #ffffff 1px 0 10px;
-          color: pink;
-          height: 5px;
-          background-color: hotpink;
-        }
+      
       }
     </style>
   </body>

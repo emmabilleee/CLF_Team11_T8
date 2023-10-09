@@ -9,42 +9,47 @@ const data = await fetch("https://augemxyhxliaasohflww.supabase.co/rest/v1/CLF",
 import "../styles/style.css";
 import Button from "../components/Button.astro";
 import MainLayout from "../layouts/MainLayout.astro";
+console.log("DATA",data)
 ---
 
 <MainLayout>
+      <h1>INSTALLATIONS</h1>
+
   <section class="grid_1">
-    <h1>INSTALLATIONS</h1>
-    <Button variant="third" link="/aboutus/">LIGHT INSTALLATIONS</Button>
-    <Button variant="third" link="/aboutus/">POP-UP EVENTS</Button>
-    <Button variant="third" link="/routes/">EXTRA LIGHT EXPERIENCES</Button>
-  </section>
+        <Button variant="third" link="/aboutus/">LIGHT INSTALLATIONS</Button>
+        <Button variant="third" link="/aboutus/">POP-UP EVENTS</Button>
+        <Button variant="third" link="/routes/">EXTRA LIGHT EXPERIENCES</Button>
+    </section>
 
-  <h2>LIGHT INSTALLATIONS</h2>
-  <section class="installation">
-    {
-      data.map((show) => {
-        return <Installation data={show} />;
-      })
+    <h2>LIGHT INSTALLATIONS</h2>
+    <section class="installation">
+{data.map(show=>{
+    if (show.type==="Light") {
+return <Installation data={show}/> 
     }
-  </section>
+})
+}
+</section>
 
-  <h2>POP-UP EVENTS</h2>
-  <section class="installation">
-    {
-      data.map((show) => {
-        return <Installation data={show} />;
-      })
-    }
-  </section>
+<h2>POP-UP EVENTS</h2>
+<section class="installation">
+{data.map(show=>{
+  if (show.type==="PopUp"){
+return <Installation data={show}/> 
+  }
+})
+}
+</section>
 
-  <h2>EXTRA LIGHT EXPERIENCES</h2>
-  <section class="installation">
-    {
-      data.map((show) => {
-        return <Installation data={show} />;
-      })
+<h2>EXTRA LIGHT EXPERIENCES</h2>
+<section class="installation">
+{data.map(show=>{
+    if (show.type==="EkstaLight"){
+return <Installation data={show}/> 
     }
-  </section>
+}) 
+}
+</section>
 </MainLayout>
 
 <style>
@@ -80,24 +85,31 @@ import MainLayout from "../layouts/MainLayout.astro";
       width: 50px;
     }
   }
-
-  .grid_1 {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    gap: 70px;
-    margin-left: 500px;
-    margin-right: 500px;
-    margin-top: 80px;
-    margin-bottom: 100px;
+  .installation img{
+    width: 50px;
   }
-  .grid_1 h1 {
+
+        @media (min-width: 800px) {
+.grid_1{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    grid-template-rows: 1fr;
+    margin-top: 100px;
+    margin-bottom: 200px; 
+    margin-left: 200px;
+    margin-right: 200px;
+    
+    
+}
+h1{
     text-align: center;
     text-shadow: #ffffff 1px 0 10px;
     margin-bottom: 5px;
     font-size: 2.8rem;
-  }
-  h2 {
+    margin-top: 50px;
+}
+h2{
     text-align: center;
     margin-bottom: 40px;
     font-size: 2.2rem;
@@ -115,4 +127,9 @@ import MainLayout from "../layouts/MainLayout.astro";
   .installation img {
     width: 200px;
   }
+        }
+
+
+
+ 
 </style>
