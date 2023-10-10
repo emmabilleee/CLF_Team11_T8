@@ -5,6 +5,7 @@
 img {
   width: 100%;
   aspect-ratio: auto;
+  border-radius: 10px;
 }
 body {
   background-color: #000026;
