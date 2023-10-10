@@ -18,21 +18,25 @@ headers: {
 const {myData} = Astro.props
 console.log(myData)
 ---
-<MainLayout>
+<MainLayout> <a href="../listeview/"> <img src="../logo/back.png" alt="back" class="back"></a>
 <article>
-    <section>
-    <h2>{myData.id +". "+ myData.artname}</h2>
+    <section>  
+      <h2>{myData.id +". "+ myData.artname}</h2>
     <img src= {"/imgs/"+ myData.img} alt="">
     <p>{"Website: " + myData.links}</p>
     <p>{"Thanks to: " + myData.thanksto}</p>
+
     </section>
         <section class="section2">
+        
     <h3>{"Where: " + myData.where}</h3>
-    <h3>{"Who: " + myData.who}</h3>
+    <h3 class="bottom">{"Who: " + myData.who}</h3>
     <p class="desciption">{myData.text}</p>
+    
         </section>
-
+        
 </article>
+
 </MainLayout>
 <style>
       @media screen and (min-width: 800px) {
@@ -46,39 +50,54 @@ console.log(myData)
  }
  h2{
         margin-bottom: 20px;
-
  }
  h3{
-        margin-bottom: 20px;
+        margin-bottom: 10px;
 
- }}
-    article{
+ }  article{
         display: grid;
         grid-template-columns: 1fr 1fr;
-        margin: 80px;
+        margin: 100px;
         line-height: 30px;
         gap: 30px;
+ }}
+  
+ article{
+       
+        margin: 30px;
+        line-height: 30px;
+        gap: 30px;
+        font-size: 0.6rem;
  }
  section{
     margin-bottom: 40px;
  }
  h2{
         margin-bottom: 20px;
-        font-size: 2rem;
+        font-size: 1.2rem;
 
  }
  h3{
-        margin-bottom: 20px;
-            font-size: 1.2rem;
-
-
+        margin-bottom: 10px;
+            font-size: 0.8rem;
  }
+
  .desciption{
-    font-size: 1.2rem;
+    font-size: 0.8rem;
     line-height: 2rem;
+    line-height: 30px;
  }
  .section2{
     margin-top: 50px;
  }
 
+ .bottom {
+  margin-bottom: 40px;
+ }
+
+.back {
+  width: 40px;
+  margin-top: 20px;
+  margin-left: 30px;
+}
 </style>
