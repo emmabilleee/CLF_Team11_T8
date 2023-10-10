@@ -3,7 +3,7 @@ import Button from "./Button.astro";
 ---
 
 <section class="newsletter mobile">
-  <img class="newsletter_image" src="https://copenhagenlightfestival.org/wp-content/uploads/2020/02/Trampoline_02-1.jpg" alt="" />
+  <img class="newsletter_image" src="/imgs/newsletter.jpg" alt="newsletter_img" />
 
   <form>
     <h3 class="newsletter_header">Get updated about the festival! <br>Sign up with your email below</h3>
@@ -56,6 +56,8 @@ import Button from "./Button.astro";
   img {
     justify-content: center;
     margin-top: 30px;
+          aspect-ratio: auto;
+
 
   }
   .newsletter {
@@ -70,6 +72,7 @@ text-align: center;
   .newsletter_image {
       justify-content: center;
       width: 50%;
+      aspect-ratio: auto;
     }
 
     .newsletter {
@@ -105,9 +108,7 @@ text-align: center;
     margin-top: 30px;
     }
 
-    img {
-      justify-content: center;
-    }
+
       }
   
 </style>

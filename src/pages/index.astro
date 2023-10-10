@@ -9,7 +9,7 @@ import MainLayout from "../layouts/MainLayout.astro";
 <!DOCTYPE html>
 <MainLayout>
   <section class="hero_section">
-    <img src=".../public/imgs/" alt="hero" class="hero_img" />
+    <img src="/imgs/hero.jpg" alt="hero" class="hero_img" />
     <div class="text_hero">
       <h1>COPENHAGEN LIGHT FESTIVAL</h1>
       <h2>2. februar - 25 februar 2024</h2>
@@ -27,7 +27,7 @@ import MainLayout from "../layouts/MainLayout.astro";
       <h2 class="info_header">“Copenhagen Light Festival looks forward to making a strong return in 2024”</h2>
       </div>
       <div class="grid_1">
-        <img src="https://copenhagenlightfestival.org/wp-content/uploads/2023/02/Our-Beating-Heart.jpg" alt="" class="hero_img" />
+        <img src="/imgs/discoheart.jpg" alt="discoheart" class="hero_img" />
         <p class="info_text">Copenhagen Light Festival also wishes to bring even bigger light installations to Copenhagen’s city center, which will require support and help.The festival therefore hopes that the planning of the 2024 edition will be spared by energy crises or worse, so that light may once again shine on the important state-owned buildings in the city center, an aspect of the festival that we’ve missed in 2023. This is something we hope to realize in 2024.</p>
       </div>
     </article>
@@ -45,7 +45,7 @@ import MainLayout from "../layouts/MainLayout.astro";
           </p>
 		  </section>
 		  <section class="installation_info">
-          <img src="https://copenhagenlightfestival.org/wp-content/uploads/2023/02/Echo-1.jpg" alt="" class="insta"/>
+          <img src="/imgs/installation.jpg" alt="billede_installation" class="insta"/>
         	<Button variant="secondary" link="/listeview/" class="knap">READ MORE</Button>
 		</section>
       </article>
@@ -64,7 +64,7 @@ import MainLayout from "../layouts/MainLayout.astro";
       grid-row: 1/-1;
       z-index: -1;
       object-fit: cover;
-            aspect-ratio: 16/9;       
+      aspect-ratio: 16/9;       
 
     }
 
@@ -128,6 +128,7 @@ import MainLayout from "../layouts/MainLayout.astro";
       .insta{
         margin-top: 10px;
         margin-bottom: 50px;
+        aspect-ratio: auto;
       }
       .installation_info{
         text-align: center;
@@ -143,10 +144,10 @@ import MainLayout from "../layouts/MainLayout.astro";
     .hero_section img {
       grid-column: 1/-2;
       grid-row: 1/-1;
-      width: auto;
-      height: 950px;
       z-index: -1;
       margin-top: -200px;
+         object-fit: cover;
+      aspect-ratio: 16/9; 
       
     }
 
@@ -212,11 +213,10 @@ import MainLayout from "../layouts/MainLayout.astro";
      .insta{
         margin-top: 140px;
         margin-bottom: 50px;
+        aspect-ratio: auto;
       }
 
-      .hero_img{
-      aspect-ratio: auto;       
-}
+
    
   }
     
