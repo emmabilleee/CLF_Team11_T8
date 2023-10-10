@@ -6,7 +6,8 @@ import Button from "./Button.astro";
 
 <a href={`/installations/${data.slug}`}>
   <article>
-    <img src={"/imgs/" + data.img} alt="" />
+    <div class="image_container">
+    <img src={"/imgs/" + data.img} alt="" class="image"/></div>
     <h2>{data.artname}</h2>
     <!-- <Button variant="fourth">READ MORE</Button> -->
   </article>
@@ -14,10 +15,11 @@ import Button from "./Button.astro";
 
 <style>
   h2 {
-    font-size: 18px;
-    margin-top: 30px;
-    margin-bottom: 40px;
+    font-size: 15px;
+    margin-top: 10px;
+    margin-bottom: 30px;
   }
+
 
   article {
     text-align: center;
@@ -25,5 +27,39 @@ import Button from "./Button.astro";
   a{
     text-decoration: none;
   }
- 
+   @media (min-width: 800px)
+  {
+      h2 {
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+ .image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.image {
+  width: 100%; /* Ensure the image takes the full width of its container */
+  transition: box-shadow 0.3s ease-out; /* Add transition for smooth effect */
+  box-shadow: none; /* Initially no box shadow */
+}
+
+.image:hover {
+  box-shadow: 0 0 20px white; /* Add box shadow on hover (white shadow) */
+}
+
+/* ... Rest of your CSS ... */
+In this updated code:
+
+We've added a box-shadow property to the image to create the shining effect when hovered.
+The box-shadow is initially set to none so that it's not visible until the hover.
+On hover, we set a white box-shadow to create the shining effect. Adjust the box-shadow values (e.g., spread radius, blur radius, color) as needed for your desired effect.
+
+
+
+
+
+  }
 </style>
