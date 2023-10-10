@@ -15,6 +15,7 @@ import MainLayout from "../layouts/MainLayout.astro";
           <p>In three weeks of February the festival presents a wide range of light based works such as sculpture, installation, projection mapping, event and illumination created by both established and upcoming light artists, lighting designers, students and organizations.</p>
 
           <p>The Festival invites both international and local audiences of all ages to enjoy the city during the darkest and even the coldest time of the year.</p>
+       <div class="liste"> <img src="../logo/back.png" alt="back" class="back"> <a href="/info/">More Info</a></div>
         </div>
         <div>
           <img src="/imgs/Echo.jpg" alt="echo_billede" />
@@ -26,6 +27,7 @@ import MainLayout from "../layouts/MainLayout.astro";
 </MainLayout>
 
     <style>
+    
       h1 {
         text-shadow: #ffffff 1px 0 10px;
         text-align: center;
@@ -38,6 +40,7 @@ import MainLayout from "../layouts/MainLayout.astro";
       }
       p {
         margin-top: 30px;
+         font-size: 17px;
       }
       img {
         margin-top: 30px;
@@ -47,6 +50,28 @@ import MainLayout from "../layouts/MainLayout.astro";
 
       }
      
+          a {
+        margin-top: 26px;
+        color: white;
+        text-shadow: #ffffff 1px 0 15px;
+    }
+a:hover{
+   text-shadow: hotpink 1px 0 30px;
+  }
+    
+      .liste {
+  display: flex;
+  align-items: center; /* Align items vertically */
+}
+
+.liste img {
+  margin-right: 10px; /* Add some spacing between image and text */
+}
+.back {
+    width: 30px;
+    transform: rotate(180deg);
+    margin-right: 10px;
+}
       @media (min-width: 800px) {
         h1 {
           top: 35%;

@@ -1,0 +1,117 @@
+---
+import "../styles/style.css";
+
+import MainLayout from "../layouts/MainLayout.astro";
+import Button from "../components/Button.astro";
+---
+
+<MainLayout>
+    <section>
+      <h1>INFO</h1>
+      <div class="grid_info">
+        <div>
+          <p>Here you find all the info you need about Copenhagen Light Festival</p>
+
+          <p><span class="fed">When: </span> 2. February - 25. February 2024</p>
+
+          <p><span class="fed">Openinghours: </span> 17.00 - 22.30 o’clock (5.00-10.30 pm)</p>
+          
+         <p><span class="fed">Where: </span>Copenhagen, Capital of Denmark</p>
+         <div class="liste">  <img src="../logo/back.png" alt="back" class="back">  <a href="/routes/">Find Routes</a></div>
+          
+        <p class="fed">What:</p>
+    <div class="liste"> <img src="../logo/back.png" alt="back" class="back"> <a href="/listeview/">See Installations</a></div>
+     <div class="liste"> <img src="../logo/back.png" alt="back" class="back"> <a href="/aboutus/">About Us</a></div>
+    </div>
+        
+        <div>
+          <img src="/imgs/Waves.jpg" alt="echo_billede" />
+        </div>
+      
+ </div>
+        </section>
+
+</MainLayout>
+
+    <style>
+
+      .fed {
+        font-weight: 900;
+        font-size: 1rem;
+       color: #7D65D0;
+      }
+    a {
+        margin-top: 26px;
+        color: white;
+        text-shadow: #ffffff 1px 0 15px;
+    }
+a:hover{
+   text-shadow: hotpink 1px 0 30px;
+  }
+    
+      .liste {
+  display: flex;
+  align-items: center; /* Align items vertically */
+}
+
+.liste img {
+  margin-right: 10px; /* Add some spacing between image and text */
+}
+      h1 {
+        text-shadow: #ffffff 1px 0 10px;
+        text-align: center;
+        font-size: 30px;
+        margin-top: 50px;
+      }
+      .grid_info {
+        margin-right: 30px;
+        margin-left: 30px;
+        
+      }
+      p {
+        margin-top: 30px;
+         font-size: 17px;
+      }
+      img {
+        margin-top: 30px;
+              aspect-ratio: auto;
+               width: 100%;
+        height: auto;
+
+      }
+.back {
+    width: 30px;
+    transform: rotate(180deg);
+    margin-right: 10px;
+}
+     
+      @media (min-width: 800px) {
+        h1 {
+          top: 35%;
+          left: 40%;
+          text-shadow: #ffffff 1px 0 10px;
+          text-align: center;
+          font-size: 50px;
+        }
+        .grid_info {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          margin-right: 50px;
+          margin-left: 50px;
+          margin-top: 50px;
+          gap: 30px;
+          margin-bottom: 150px;
+        }
+        p {
+          font-size: 17px;
+        line-height: 30px;
+        }
+      section{
+        margin-bottom: 150px;
+      }
+      }
+    </style>
+  </body>
+
+
+</html>
