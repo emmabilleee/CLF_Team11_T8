@@ -10,7 +10,7 @@ import Button from "../components/Button.astro";
       <h1>INFO</h1>
       <div class="grid_info">
         <div>
-          <p>Here you find all the info you need about Copenhagen Light Festival</p>
+          <h3 id="overskrift">Here you find all the info you need about the Festival</h3>
 
           <p><span class="fed">When: </span> 2. February - 25. February 2024</p>
 
@@ -34,9 +34,12 @@ import Button from "../components/Button.astro";
 </MainLayout>
 
     <style>
+#overskrift {
+  font-size: 0.8rem;
+  margin-top: 20px;
 
+}
       .fed {
-        font-weight: 900;
         font-size: 1rem;
        color: #7D65D0;
       }
@@ -46,7 +49,7 @@ import Button from "../components/Button.astro";
         text-shadow: #ffffff 1px 0 15px;
     }
 a:hover{
-   text-shadow: hotpink 1px 0 30px;
+   text-shadow: #8f7cd4 1px 0 30px;
   }
     
       .liste {
