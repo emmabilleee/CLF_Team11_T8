@@ -34,17 +34,22 @@ import MainLayout from "../layouts/MainLayout.astro";
     <style>
 #overskrift {
   font-size: 0.8rem;
-  margin-top: 20px;
-
+  margin-top: 18px;
+  margin-bottom: 40px;
+  text-align: center;
 }
       .fed {
-        font-size: 1rem;
        color: #7D65D0;
+        font-size: 12px;
+        line-height: 25px;
+        margin-top: 20px;
+        font-weight: 800;
       }
     a {
         margin-top: 26px;
         color: white;
         text-shadow: #ffffff 1px 0 15px;
+        font-size: 15px;
     }
 a:hover{
    text-shadow: #8f7cd4 1px 0 30px;
@@ -67,11 +72,10 @@ a:hover{
       .grid_info {
         margin-right: 30px;
         margin-left: 30px;
-        
       }
-      p {
-        margin-top: 30px;
-         font-size: 17px;
+     p {
+        font-size: 12px;
+        margin-top: 20px;
       }
       img {
         margin-top: 30px;
@@ -87,6 +91,13 @@ a:hover{
 }
      
       @media (min-width: 800px) {
+         .fed {
+       color: #7D65D0;
+            font-size: 20px;
+      line-height: 40px;
+        margin-top: 20px;
+        font-weight: 800;
+      }
         h1 {
           top: 35%;
           left: 40%;
@@ -103,10 +114,24 @@ a:hover{
           gap: 30px;
           margin-bottom: 150px;
         }
+        #overskrift {
+  font-size: 1.11rem;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  text-align: left;
+
+}
         p {
-          font-size: 17px;
-        line-height: 30px;
+         font-size: 20px;
+      line-height: 40px;
         }
+          a {
+        margin-top: 26px;
+        color: white;
+        text-shadow: #ffffff 1px 0 15px;
+          font-size: 20px;
+      line-height: 40px;
+    }
       section{
         margin-bottom: 150px;
       }
